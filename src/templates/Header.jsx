@@ -81,7 +81,7 @@ const Header = () => {
   `
 
   return (
-    <div>
+    <>
       <Wrapper>
         <NavBar>
           <h1>
@@ -112,7 +112,7 @@ const Header = () => {
           </ImageArea>
         </Container>
       </Wrapper>
-    </div>
+    </>
   )
 }
 
