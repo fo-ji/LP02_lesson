@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import Badge from '../components/Badge'
 import featuresPoint1Image from '../assets/images/features-point1.png'
 import featuresPoint2Image from '../assets/images/features-point2.png'
 import featuresPoint3Image from '../assets/images/features-point3.png'
-import Badge from '../components/Badge'
+import featuresThumb1Image from '../assets/images/features-thumb1.png'
+import featuresThumb2Image from '../assets/images/features-thumb2.png'
+import featuresThumb3Image from '../assets/images/features-thumb3.png'
 
 const Main = () => {
 
@@ -52,6 +55,32 @@ const Main = () => {
       line-height: 1.8;
     }
   `
+
+  const PointDetail = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    text-align: center;
+  `
+
+  const DetailList = styled.div`
+    padding: 0 20px;
+    width: 28%;
+    img {
+      width: 100%;
+    }
+    h4 {
+      font-size: 19px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.8;
+    }
+  `
+
   return (
     <>
       <Wrapper>
@@ -81,6 +110,23 @@ const Main = () => {
                 <p>送ったメールに対して開封した企業がわかるので、 その企業に対してテレアポを行えばアポイントに繋がる確率が飛躍的に向上します。</p>
               </div>
           </Point>
+          <PointDetail>
+            <DetailList>
+              <img src={featuresThumb1Image}></img>
+              <h4>企業条件をカスタマイズして抽出</h4>
+              <p>特定の条件の企業情報を、URLなどからリクエストが可能です。 頂いたリクエストはAPOLLO SALESがWEB上からリストアップし、次回営業の条件に反映します。</p>
+            </DetailList>
+            <DetailList>
+              <img src={featuresThumb2Image}></img>
+              <h4>御社の営業リストを活用</h4>
+              <p>すでにお持ちの企業リストをCSV形式でインポート可能です。 インポート後は、APOLLO SALESが自動で企業情報を取得し、これまでの営業活動との連携をスムーズに行います。</p>
+            </DetailList>
+            <DetailList>
+              <img src={featuresThumb3Image}></img>
+              <h4>データベースは日々アップデート</h4>
+              <p>企業のデータベースは日々アップデートされるので、常に最新の情報で営業リストを作成できます。</p>
+            </DetailList>
+          </PointDetail>
         </Features>
       </Wrapper>
     </>
