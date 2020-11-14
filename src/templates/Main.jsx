@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import featuresPoint1Image from '../assets/images/features-point1.png'
 import featuresPoint2Image from '../assets/images/features-point2.png'
 import featuresPoint3Image from '../assets/images/features-point3.png'
+import Badge from '../components/Badge'
 
 const Main = () => {
 
@@ -26,7 +27,7 @@ const Main = () => {
       font-weight: bold;
       line-height: 1em;
     }
-    `
+  `
 
   const Point = styled.div`
     display: flex;
@@ -59,14 +60,14 @@ const Main = () => {
           <Point>
               <img src={featuresPoint1Image}></img>
               <div className='textfield'>
-                {/* <Badge /> */}
+              <Badge label={'Point1'} />
                 <h3>簡単に営業リストを<br />作成できる</h3>
                 <p>アタックしたい企業の条件を指定すると、APOLLO SALESが インターネット上にある企業情報からリストを作成。 自動で企業リストの収集を行うので、情報収集の手間が省けます。 条件は業種や地域などで指定が可能です。</p>
               </div>
           </Point>
           <Point>
               <div className='textfield'>
-                {/* <Badge /> */}
+              <Badge label={'Point2'} />
                 <h3>作成した営業リストに<br />自動でアプローチ</h3>
                 <p>作成した営業リストに対し、自動でメール送付またはお問い合わせフォーム投稿でアプローチできます。 手間をかけずにアポイントを取得することはもちろん、アプローチ結果をスコア化することができます。</p>
               </div>
@@ -75,7 +76,7 @@ const Main = () => {
           <Point>
               <img src={featuresPoint3Image}></img>
               <div className='textfield'>
-                {/* <Badge /> */}
+              <Badge label={'Point3'} />
                 <h3>テレアポの効率を<br />飛躍的に向上させます</h3>
                 <p>送ったメールに対して開封した企業がわかるので、 その企業に対してテレアポを行えばアポイントに繋がる確率が飛躍的に向上します。</p>
               </div>
