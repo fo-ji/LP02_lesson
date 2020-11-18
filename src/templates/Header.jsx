@@ -81,12 +81,12 @@ const Header = () => {
   `
 
   return (
-    <div>
+    <>
       <Wrapper>
         <NavBar>
           <h1>
             <a href='http://localhost:3000/'>
-              <img src={headerLogo} width={'100%'}></img>
+              <img src={headerLogo} width={'100%'} />
             </a>
           </h1>
           <nav>
@@ -108,11 +108,11 @@ const Header = () => {
             </p>
           </TextArea>
           <ImageArea>
-            <img src={headerImage} width={'100%'}></img>
+            <img src={headerImage} width={'100%'} />
           </ImageArea>
         </Container>
       </Wrapper>
-    </div>
+    </>
   )
 }
 

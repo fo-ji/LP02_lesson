@@ -1,11 +1,13 @@
 import React from 'react'
-import './assets/reset.css'
+import './assets/styles/reset.css'
 import Header from './templates/Header'
+import Main from './templates/Main'
 
 const App = () => {
   return (
     <>
       <Header />
+      <Main />
     </>
   );
 }
