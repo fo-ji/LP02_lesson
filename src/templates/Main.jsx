@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Badge from '../components/Badge'
 import ImageSwiper from '../components/ImageSwiper'
 import ImageTextSwiper from '../components/ImageTextSwiper'
+import FormList from '../components/FormList'
+import MediumButton from '../components/MediumButton'
 import featuresPoint1Image from '../assets/images/features-point1.png'
 import featuresPoint2Image from '../assets/images/features-point2.png'
 import featuresPoint3Image from '../assets/images/features-point3.png'
@@ -15,6 +17,7 @@ import bannerJellyfish from '../assets/images/banner-jellyfish.png'
 import bannerJoboutique from '../assets/images/banner-jobotique.png'
 import bannerLibz from '../assets/images/banner-libz.png'
 import bannerTimes from '../assets/images/banner-times.png'
+import backgroundContactImage from '../assets/images/bg-contact.jpg'
 
 const Main = () => {
 
@@ -123,7 +126,7 @@ const Main = () => {
     }
   `
 
-    const UsersVoice = styled.div`
+  const UsersVoice = styled.div`
     width: 100%;
     font-weight: bold;
     h2 {
@@ -196,17 +199,83 @@ const Main = () => {
     .swiper-pagination {
       margin-top: 130px;
     }
-    `
+  `
   // [TODO] 後に修正する ↑ 
 
-    const Banner = styled.div`
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 900px;
-      margin: 50px auto 0;
-      padding-bottom: 70px;
-    `
+  const Banner = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 50px auto 0;
+    padding-bottom: 70px;
+  `
+
+  const ContactUs = styled.div`
+    width: 100%;
+    font-weight: bold;
+    h2 {
+      color: #003CAA;
+      height: 106px;
+      font-size: 101px;
+      margin-bottom: -8px;
+      text-align: center;
+      small {
+        margin-left: 20px;
+        font-size: 45px;
+      }
+    }
+    .contact-us-img {
+      background-image: url(${backgroundContactImage});
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 523px;
+    }
+  `
+
+  const Form = styled.div`
+    background-image: url(${backgroundImage});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0840A7;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 40px;
+    color: #fff;
+      .text-content {
+        width: 50%;
+        h3 {
+          font-size: 42px;
+          margin-bottom: 40px;
+        }
+        p {
+          font-size: 17px;
+          font-weight: bold;
+          line-height: 1.8em;
+          margin: 17px 0;
+        }
+        .sign {
+          margin-top: 50px;
+          text-align: right;
+        }
+      }
+      .form-content {
+        width: 45%;
+        h4 {
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+        .comment {
+          margin-top: 20px;
+          font-weight: normal;
+          font-size: 12px;
+          a {
+            color: #00D0EE;
+            text-decoration: underline;
+          }
+        }
+      }
+  `
 
   return (
     <>
@@ -279,6 +348,23 @@ const Main = () => {
             <img src={bannerTimes} />
           </Banner>
         </UsersVoice>
+        <ContactUs>
+          <h2>CONTACT US<small>お気軽にお問い合わせください</small></h2> 
+          <div className='contact-us-img' />
+          <Form>
+            <div className='text-content' >
+              <h3>ビジネスの成長を<br />APOLLO SALESが<br />お手伝いします。</h3>
+              <p>私たちが提供するサービスは、クラウドサービスになりますが弊社のサポートチームがより効果を実感いただけるよう、全力でサポートします。 営業戦略を成功させるためなら、APOLLO SALESより簡単な方法はありません。導入・質問など、お気軽にご相談ください。</p>
+              <p className='sign' >APOLLO SALES 開発/サポートチーム 一同</p>
+            </div>
+            <div className='form-content' >
+              <h4>APOLLO SALES お問い合わせフォーム</h4>
+              <FormList />
+              <MediumButton label={'送信する'} href='' />
+              <p className='comment'>送信いただいた内容は、弊社<a href='https://dashboard.apolloai.jp/pages/privacy_policy'>プライバシーポリシー</a>に基づき扱われます</p>
+            </div>
+          </Form>
+        </ContactUs>
       </Wrapper>
     </>
   )

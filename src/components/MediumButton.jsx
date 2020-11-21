@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     fontWeight: 'bold',
     borderRadius: '30px',
     padding: '20px',
+    width: '70%',
     '&:hover': {
       backgroundColor: '#0CAB3D',
     }
