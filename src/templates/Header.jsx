@@ -42,6 +42,9 @@ const Header = () => {
     ul > li > a:hover {
       text-decoration: underline;
     }
+    ul > li > .button:hover {
+      text-decoration: none;
+    }
   `
 
   const Container = styled.div`
@@ -92,9 +95,9 @@ const Header = () => {
           <nav>
             <ul>
               <li><a href='http://localhost:3000/'>トップ</a></li>
-              <li><a>導入事例</a></li>
-              <li><a>使い方と機能</a></li>
-              <li><SmallButton label={'お問い合わせ'} href='' /></li>
+              <li><a href='#user-voice-link'>導入事例</a></li>
+              <li><a href='#howto-link'>使い方と機能</a></li>
+              <li><a href='#contact-link' className='button'><SmallButton label={'お問い合わせ'} /></a></li>
             </ul>
           </nav>
         </NavBar>
@@ -104,7 +107,7 @@ const Header = () => {
             <p>
               新規営業に必要なリスト作成。 通常であればリストを購入または作成を外注、手作業で作成が必要になりますが、 APOLLO SALESは100万リストの中から条件でリスト作成ができ、メール配信まで一括でできるツールです。 さらに、メールを読んで連絡がくる成約感度の高い返信の50%は役員クラスから。 一流の営業マンに負けない、効率の良い営業力を御社に提供します。
               <small>2018年11月 当社でAPOLLO SALSESを使用した実績です。</small>
-              <LargeButton label={'お問い合わせはこちらから'} href='' />
+              <a href='#contact-link'><LargeButton label={'お問い合わせはこちらから'} /></a>
             </p>
           </TextArea>
           <ImageArea>
