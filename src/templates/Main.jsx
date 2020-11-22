@@ -18,6 +18,7 @@ import bannerJoboutique from '../assets/images/banner-jobotique.png'
 import bannerLibz from '../assets/images/banner-libz.png'
 import bannerTimes from '../assets/images/banner-times.png'
 import backgroundContactImage from '../assets/images/bg-contact.jpg'
+import backgroundFaqImage from '../assets/images/bg-section-inverse.png'
 
 const Main = () => {
 
@@ -222,7 +223,7 @@ const Main = () => {
       text-align: center;
       small {
         margin-left: 20px;
-        font-size: 45px;
+        font-size: 30px;
       }
     }
     .contact-us-img {
@@ -275,6 +276,60 @@ const Main = () => {
           }
         }
       }
+  `
+  const Faq = styled.div`
+    background-image: url(${backgroundFaqImage});
+    background-repeat: no-repeat;
+    font-weight: bold;
+    color: #003CAA;
+    margin: 0 auto;
+    padding: 60px 80px 30px;
+    h2 {
+      height: 106px;
+      font-size: 101px;
+      text-align: center;
+      small {
+        margin-left: 20px;
+        font-size: 45px;
+      }
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .item {
+      width: 45%;
+      margin: 30px 0;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .item .question {
+      margin: 25px 0;
+    }
+    .item .answer {
+      position: relative;
+      padding: 15px 30px;
+    }
+
+    .item .answer::before, .item .answer::after {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 50px;
+    }
+    .item .answer::before {
+      top: 0;
+      left: 0;
+      border-top: 2px solid #0045C0;
+      border-left: 2px solid #0045C0;
+    }
+    .item .answer::after {
+      bottom: 0;
+      right: 0;
+      border-bottom: 2px solid #0045C0;
+      border-right: 2px solid #0045C0;
+    }
   `
 
   return (
@@ -366,6 +421,47 @@ const Main = () => {
           </Form>
         </ContactUs>
       </Wrapper>
+      <Faq>
+        <h2>FAQ <small>よくある質問</small></h2>
+        <div className='row'>
+          <div className='item'>
+            <h4 className='question'>Q.企業情報をどうやって集めてますか？</h4>
+            <div className='answer'>
+              <p className='text'>インターネット上に公開されている企業の情報を収集した後、営業リストとして最適化し、ご提供しております。</p>
+            </div>
+          </div>
+          <div className='item'>
+            <h4 className='question'>Q.利用料金はいくらですか？</h4>
+            <div className='answer'>
+              <p className='text'>月額数万円〜の非常にリーズナブルな料金形態となっております。 ご契約期間等により、月額費用が変動しますので、詳細は弊社までお問い合わせください。 支払い方法は一括払い・毎月払いなど柔軟に対応しております。</p>
+            </div>
+          </div>
+          <div className='item'>
+            <h4 className='question'>Q.サポート体制を教えてください</h4>
+            <div className='answer'>
+              <p className='text'>ご利用開始からスムーズに運用頂けるよう、専任担当者をアサインさせて頂き、導入コンサルティングを行なっております。 操作方法からアポイント取得に効果的な営業メール文面のご提案など、成果にフォーカスしたサポートをさせて頂いております。</p>
+            </div>
+          </div>
+          <div className='item'>
+            <h4 className='question'>Q.「お問い合わせ」をすると、しつこく営業されたりしませんか？</h4>
+            <div className='answer'>
+              <p className='text'>サービス詳細のご説明やご検討状況のヒアリングをさせて頂く場合はございますが、しつこい営業をすることはありません。安心してお問い合わせください。</p>
+            </div>
+          </div>
+          <div className='item'>
+            <h4 className='question'>Q.申し込みから導入までどのくらいの期間が掛かりますか？</h4>
+            <div className='answer'>
+              <p className='text'>お申込みの翌1日または16日が利用開始日となります。お申込み後は、送信するリストの選定、文章の設定、送信のみですので最短で翌営業日には実施が可能です。</p>
+            </div>
+          </div>
+          <div className='item'>
+            <h4 className='question'>Q.テレアポとの併用は可能ですか？</h4>
+            <div className='answer'>
+              <p className='text'>もちろん可能です。APOLLO SALESで送信されたメールに対して開封した企業名がわかるため、テレアポとの併用でさらに効率的なセールス活動を行うことができます。</p>
+            </div>
+          </div>
+        </div>
+      </Faq>
     </>
   )
 }
