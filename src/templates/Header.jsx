@@ -19,9 +19,11 @@ const Header = () => {
   `
 
   const NavBar = styled.div`
-    display: flex;
-    padding: 0 40px;
-    width: 100%;
+    .header {
+      display: flex;
+      padding: 0 40px;
+      width: 100%;
+    }
     h1 {
       font-size: 68px;
       margin: 0 auto 0 0;
@@ -44,6 +46,17 @@ const Header = () => {
     }
     ul > li > .button:hover {
       text-decoration: none;
+    }
+
+    #scroll-option.header.is-active {
+      color: white;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      width: 100%;
     }
   `
 
@@ -83,23 +96,41 @@ const Header = () => {
     width: 35%;
   `
 
+  const ScrollFunction = () => {
+    const currentPosition = document.getElementById('scroll-option')
+    const currentPositionHeight = window.pageYOffset
+    if (currentPositionHeight > 100) {
+      currentPosition.classList.add('is-active')
+    } else {
+      currentPosition.classList.remove('is-active')
+    }
+  }
+  window.onload = function() {
+    ScrollFunction()
+  }
+  window.onscroll = function() {
+    ScrollFunction()
+  }
+
   return (
     <>
       <Wrapper>
         <NavBar>
-          <h1>
-            <a href='http://localhost:3000/'>
-              <img src={Logo} width={'100%'} />
-            </a>
-          </h1>
-          <nav>
-            <ul>
-              <li><a href='http://localhost:3000/'>トップ</a></li>
-              <li><a href='#user-voice-link'>導入事例</a></li>
-              <li><a href='#howto-link'>使い方と機能</a></li>
-              <li><a href='#contact-link' className='button'><SmallButton label={'お問い合わせ'} /></a></li>
-            </ul>
-          </nav>
+          <div id='scroll-option' className='header'>
+            <h1>
+              <a href='http://localhost:3000/'>
+                <img src={Logo} width={'100%'} />
+              </a>
+            </h1>
+            <nav>
+              <ul>
+                <li><a href='http://localhost:3000/'>トップ</a></li>
+                <li><a href='#user-voice-link'>導入事例</a></li>
+                <li><a href='#howto-link'>使い方と機能</a></li>
+                <li><a href='#contact-link' className='button'><SmallButton label={'お問い合わせ'} /></a></li>
+              </ul>
+            </nav>
+          </div>
         </NavBar>
         <Container>
           <TextArea>
