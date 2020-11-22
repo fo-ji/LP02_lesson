@@ -335,7 +335,7 @@ const Main = () => {
   return (
     <>
       <Wrapper>
-        <Features>
+        <Features id='howto-link'>
           <h2>FEATURES<small>APOLO SALES でできること</small></h2>
           <Point>
               <img src={featuresPoint1Image} />
@@ -389,7 +389,7 @@ const Main = () => {
             </Container>
           </SliderBox>
         </EasyToUse>
-        <UsersVoice>
+        <UsersVoice id='user-voice-link'>
           <h2>User's VOICE<small>導入企業の声</small></h2>
           <SwipeWrapper>
             <ImageTextSwiper />
@@ -406,7 +406,7 @@ const Main = () => {
         <ContactUs>
           <h2>CONTACT US<small>お気軽にお問い合わせください</small></h2> 
           <div className='contact-us-img' />
-          <Form>
+          <Form id='contact-link'>
             <div className='text-content' >
               <h3>ビジネスの成長を<br />APOLLO SALESが<br />お手伝いします。</h3>
               <p>私たちが提供するサービスは、クラウドサービスになりますが弊社のサポートチームがより効果を実感いただけるよう、全力でサポートします。 営業戦略を成功させるためなら、APOLLO SALESより簡単な方法はありません。導入・質問など、お気軽にご相談ください。</p>
