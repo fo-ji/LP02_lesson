@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import backgroundImage from '../assets/images/background-image.png'
-import headerLogo from '../assets/images/header-logo.svg'
+import Logo from '../assets/images/logo.svg'
 import headerImage from '../assets/images/header-image.png'
 import SmallButton from '../components/SmallButton'
 import LargeButton from '../components/LargeButton'
@@ -86,7 +86,7 @@ const Header = () => {
         <NavBar>
           <h1>
             <a href='http://localhost:3000/'>
-              <img src={headerLogo} width={'100%'} />
+              <img src={Logo} width={'100%'} />
             </a>
           </h1>
           <nav>
