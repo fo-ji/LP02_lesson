@@ -16,6 +16,10 @@ const Header = () => {
     margin-bottom: 200px;
     padding: 60px 0 20px;
     width: 100%;
+    @media screen and (max-width: 768px) {
+      background-image: none;
+      padding: 0;
+    }
   `
 
   const NavBar = styled.div`
@@ -23,6 +27,11 @@ const Header = () => {
       display: flex;
       padding: 0 40px;
       width: 100%;
+      @media screen and (max-width: 768px) {
+        padding: 0;
+        margin-top: -30px;
+        margin-left: -20px;
+      }
     }
     h1 {
       font-size: 68px;
@@ -30,9 +39,15 @@ const Header = () => {
     }
     h1 > a > img {
       height: 45px;
+      @media screen and (max-width: 768px) {
+        height: 30px;
+      }
     }
     nav {
       line-height: 70px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     ul {
       display: flex;
@@ -64,14 +79,24 @@ const Header = () => {
     display: flex;
     padding: 0 40px;
     width: 100%;
+    @media screen and (max-width: 768px) {
+      padding: 0 20px;
+      flex-direction: column-reverse;
+    } 
   `
 
   const TextArea = styled.div`
     width: 65%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    } 
     h2 {
       font-size: 67px;
       margin: 40px 0 30px 0;
       font-weight: bold;
+      @media screen and (max-width: 768px) {
+        font-size: 40px;
+      }  
     }
     p {
       font-size: 17px;
@@ -80,6 +105,11 @@ const Header = () => {
       line-height: 2em;
       padding: 18px;
       width: 80%;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        margin: 0;
+        width: 100%;
+      }  
     }
     p > small {
       display: block;
@@ -89,11 +119,17 @@ const Header = () => {
     p > a {
       display: block;
       margin-top: 50px;
+      @media screen and (max-width: 768px) {
+        margin-top: 0;
+      }  
     }
   `
 
   const ImageArea = styled.div`
     width: 35%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   `
 
   const ScrollFunction = () => {
