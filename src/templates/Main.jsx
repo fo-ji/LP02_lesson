@@ -24,47 +24,80 @@ const Main = () => {
 
   const Wrapper = styled.div`
     width: 100%;
+    @media screen and (max-width: 768px) {
+      #point-reverse {
+        flex-direction: column-reverse;
+      }
+      #sm-hidden {
+        display: none;
+      }
+    }
   `
 
   const Features = styled.div`
     padding: 0 80px;
     color: #003CAA;
+    @media screen and (max-width: 768px) {
+      padding: 0 20px;
+    } 
     h2 {
       margin-bottom: 30px;
       overflow: hidden;
       font-size: 118px;
       font-weight: bold;
       line-height: 1em;
+      @media screen and (max-width: 768px) {
+        font-size: 32px;
+      } 
     }
     h2 > small {
       margin-left: 40px;
       font-size: 26px;
       font-weight: bold;
       line-height: 1em;
+      @media screen and (max-width: 768px) {
+        margin-left: 20px;
+        font-size: 10px;
+      } 
     }
   `
 
   const Point = styled.div`
     display: flex;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
     img {
       width: 50%;
-      
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
     .textfield {
       margin-top: 50px;
       width: 45%;
       margin-left: auto;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 50px;
+      }
     }
     .textfield h3 {
       font-size: 40px;
       font-weight: bold;
       margin-top: 40px;
       margin-bottom: 20px;
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
+      }
     }
     .textfield p {
       font-size: 17px;
       font-weight: bold;
       line-height: 1.8;
+      @media screen and (max-width: 768px) {
+        font-size: 15px;
+      }
     }
   `
 
@@ -102,9 +135,21 @@ const Main = () => {
       font-size: 101px;
       margin-bottom: -10px;
       text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 40px;
+        text-align: left;
+        height: 91px;
+        padding: 0 20px;
+      } 
       small {
         margin-left: 20px;
         font-size: 20px;
+        @media screen and (max-width: 768px) {
+          display: block;
+          margin: 0;
+          font-size: 16px;
+          line-height: 1.4;
+        } 
       }
     }
   `
@@ -116,14 +161,31 @@ const Main = () => {
     padding-top: 30px;
     color: #FFFFFF;
     text-align: center;
+    .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+      @media screen and (max-width: 768px) {
+        font-size: 10px
+      }
+    }
+    .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+      @media screen and (max-width: 768px) {
+        font-size: 10px
+      }
+    }
   `
 
   const Container = styled.div`
     padding: 0 40px;
+    @media screen and (max-width: 768px) {
+      padding: 0 20px; 
+    }  
     p {
       font-size: 18px;
       line-height: 1.8;
       margin: 60px 0 70px 0;
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+        margin: 10px 0 10px 0;
+      } 
     }
   `
 
@@ -136,9 +198,22 @@ const Main = () => {
       font-size: 101px;
       margin-bottom: -8px;
       text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 40px;
+        padding-top: 50px;
+        padding-left: 20px;
+        margin: 0 0 0 10px;
+        text-align: left;
+      }
       small {
         margin-left: 20px;
         font-size: 45px;
+        @media screen and (max-width: 768px) {
+          display: block;
+          font-size: 25px;
+          text-align: left;
+          margin: 10px 0 0 0;
+        }
       }
     }
   `
@@ -147,6 +222,9 @@ const Main = () => {
     .swipe-thumb {
       width: 100%;
       display: flex;
+      @media screen and (max-width: 768px) {
+        margin-top: 50px;
+      }
     }
     .swipe-thumb img {
       width: 100%;
@@ -210,6 +288,13 @@ const Main = () => {
     max-width: 900px;
     margin: 50px auto 0;
     padding-bottom: 70px;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 50px;
+      img {
+        margin: 10px;
+        width: 30%;
+      }
+    }
   `
 
   const ContactUs = styled.div`
@@ -221,9 +306,18 @@ const Main = () => {
       font-size: 101px;
       margin-bottom: -8px;
       text-align: center;
+      @media screen and (max-width: 768px) {
+        height: 50px;
+        font-size: 25px;
+        padding: 0 20px;
+      }
       small {
         margin-left: 20px;
         font-size: 30px;
+        @media screen and (max-width: 768px) {
+          margin-left: 10px;
+          font-size: 6px;
+        }
       }
     }
     .contact-us-img {
@@ -231,6 +325,10 @@ const Main = () => {
       background-size: cover;
       background-repeat: no-repeat;
       height: 523px;
+      @media screen and (max-width: 768px) {
+        margin-top: 10px;
+        height: 145px;
+      }
     }
   `
 
@@ -243,33 +341,62 @@ const Main = () => {
     justify-content: space-between;
     padding: 100px 40px;
     color: #fff;
+    @media screen and (max-width: 768px) {
+      padding: 20px;
+      display: block;
+    }
       .text-content {
         width: 50%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          padding: 0 20px;
+        }
         h3 {
           font-size: 42px;
           margin-bottom: 40px;
+          @media screen and (max-width: 768px) {
+            font-size: 28px;
+            line-height: 1.8em;
+          }
         }
         p {
           font-size: 17px;
           font-weight: bold;
           line-height: 1.8em;
           margin: 17px 0;
+          @media screen and (max-width: 768px) {
+            font-size: 12px;
+          }
         }
         .sign {
           margin-top: 50px;
           text-align: right;
+          @media screen and (max-width: 768px) {
+            margin-top: 20px;
+            margin-bottom: 50px;
+          }
         }
       }
       .form-content {
         width: 45%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          padding: 0 20px;
+        }
         h4 {
           font-size: 20px;
           margin-bottom: 30px;
+          @media screen and (max-width: 768px) {
+            font-size: 15px;
+          }
         }
         .comment {
           margin-top: 20px;
           font-weight: normal;
           font-size: 12px;
+          @media screen and (max-width: 768px) {
+            font-size: 10px;
+          }
           a {
             color: #00D0EE;
             text-decoration: underline;
@@ -284,6 +411,9 @@ const Main = () => {
     color: #003CAA;
     margin: 0 auto;
     padding: 60px 80px 30px;
+    @media screen and (max-width: 768px) {
+      padding: 50px 20px 20px;
+    }
     h2 {
       height: 106px;
       font-size: 101px;
@@ -291,18 +421,30 @@ const Main = () => {
       small {
         margin-left: 20px;
         font-size: 45px;
+        @media screen and (max-width: 768px) {
+          margin-left: 10px;
+          font-size: 10px;
+        }
       }
     }
     .row {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
     }
     .item {
       width: 45%;
       margin: 30px 0;
       font-size: 20px;
       line-height: 1.5;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        font-size: 17px;
+        margin: 18px 0;
+      }
     }
     .item .question {
       margin: 25px 0;
@@ -338,30 +480,30 @@ const Main = () => {
         <Features id='howto-link'>
           <h2>FEATURES<small>APOLO SALES でできること</small></h2>
           <Point>
-              <img src={featuresPoint1Image} />
-              <div className='textfield'>
-              <Badge label={'Point1'} />
-                <h3>簡単に営業リストを<br />作成できる</h3>
-                <p>アタックしたい企業の条件を指定すると、APOLLO SALESが インターネット上にある企業情報からリストを作成。 自動で企業リストの収集を行うので、情報収集の手間が省けます。 条件は業種や地域などで指定が可能です。</p>
-              </div>
+            <img src={featuresPoint1Image} />
+            <div className='textfield'>
+            <Badge label={'Point1'} />
+              <h3>簡単に営業リストを<br />作成できる</h3>
+              <p>アタックしたい企業の条件を指定すると、APOLLO SALESが インターネット上にある企業情報からリストを作成。 自動で企業リストの収集を行うので、情報収集の手間が省けます。 条件は業種や地域などで指定が可能です。</p>
+            </div>
+          </Point>
+          <Point id='point-reverse'>
+            <div className='textfield'>
+            <Badge label={'Point2'} />
+              <h3>作成した営業リストに<br />自動でアプローチ</h3>
+              <p>作成した営業リストに対し、自動でメール送付またはお問い合わせフォーム投稿でアプローチできます。 手間をかけずにアポイントを取得することはもちろん、アプローチ結果をスコア化することができます。</p>
+            </div>
+            <img src={featuresPoint2Image} />
           </Point>
           <Point>
-              <div className='textfield'>
-              <Badge label={'Point2'} />
-                <h3>作成した営業リストに<br />自動でアプローチ</h3>
-                <p>作成した営業リストに対し、自動でメール送付またはお問い合わせフォーム投稿でアプローチできます。 手間をかけずにアポイントを取得することはもちろん、アプローチ結果をスコア化することができます。</p>
-              </div>
-              <img src={featuresPoint2Image} />
+            <img src={featuresPoint3Image} />
+            <div className='textfield'>
+            <Badge label={'Point3'} />
+              <h3>テレアポの効率を<br />飛躍的に向上させます</h3>
+              <p>送ったメールに対して開封した企業がわかるので、 その企業に対してテレアポを行えばアポイントに繋がる確率が飛躍的に向上します。</p>
+            </div>
           </Point>
-          <Point>
-              <img src={featuresPoint3Image} />
-              <div className='textfield'>
-              <Badge label={'Point3'} />
-                <h3>テレアポの効率を<br />飛躍的に向上させます</h3>
-                <p>送ったメールに対して開封した企業がわかるので、 その企業に対してテレアポを行えばアポイントに繋がる確率が飛躍的に向上します。</p>
-              </div>
-          </Point>
-          <PointDetail>
+          <PointDetail id='sm-hidden'>
             <DetailList>
               <img src={featuresThumb1Image} />
               <h4>企業条件をカスタマイズして抽出</h4>

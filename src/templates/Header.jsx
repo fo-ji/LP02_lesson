@@ -19,6 +19,7 @@ const Header = () => {
     @media screen and (max-width: 768px) {
       background-image: none;
       padding: 0;
+      margin-bottom: 20px
     }
   `
 

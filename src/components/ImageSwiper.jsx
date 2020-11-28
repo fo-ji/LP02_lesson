@@ -4,8 +4,27 @@ import SwiperImage1 from '../assets/images/slider-1.png'
 import SwiperImage2 from '../assets/images/slider-2.png'
 import SwiperImage3 from '../assets/images/slider-3.png'
 import 'swiper/css/swiper.css'
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  sliderBox: {
+    [theme.breakpoints.down("sm")]: {
+      height: 300,
+      width: "100%"
+    },
+  },
+  img: {
+    [theme.breakpoints.down("sm")]: {
+      margin: "0 auto 16px auto",
+      height: "auto",
+      width: "90%"
+    },
+  }
+}));
 
 const ImageSwiper = () => {
+
+  const classes = useStyles()
 
   const [params] = useState({
     pagination: {
@@ -40,9 +59,9 @@ const ImageSwiper = () => {
   return (
     <Swiper {...params}>
       {imageTexts.map(imageText => (
-        <div className="swipe-thumb" key={imageText.id}>
-          <img src={imageText.img} alt='スワイプ画像' />
-          <p>{imageText.text}</p>
+        <div className={classes.sliderBox} key={imageText.id}>
+          <img className={classes.img}  src={imageText.img} alt='スワイプ画像' />
+          <p className={classes.text}>{imageText.text}</p>
         </div>
       ))}
     </Swiper>
