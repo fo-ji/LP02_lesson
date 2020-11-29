@@ -245,10 +245,19 @@ const Main = () => {
       -webkit-align-items: center;
       align-items: center;
       width: 80%;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        width: 90%;
+        margin-top: 25px;
+      }
     }
     .swiper-slide img {
       width: 100%;
       height: 366px;
+      @media screen and (max-width: 768px) {
+        margin: 0;
+        height: auto;
+      }
     }
     .swiper-slide .text-box {
       background-image: url(${backgroundImage});
@@ -260,11 +269,25 @@ const Main = () => {
       padding-left: 30px;
       padding-right: 30px;
       margin-right: -200px;
+      @media screen and (max-width: 768px) {
+        height: auto;
+        width: auto;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        /* padding: 0; */
+        margin: 0;
+      }
     } 
     .swiper-slide .text-box p {
       font-size: 15px;
       font-weight: bold;
       line-height: 1.7;
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.3;
+        text-align: left;
+      }
     }
     .swiper-slide .text-box .company-name {
       text-align: right;
