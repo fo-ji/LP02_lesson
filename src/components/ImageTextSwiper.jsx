@@ -9,13 +9,15 @@ import 'swiper/css/swiper.css'
 const ImageTextSwiper = () => {
 
   const [params] = useState({
-    slidesPerView: 3,
-    spaceBetween: 100,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
     centeredSlides: true,
     loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      type: "bullets",
+      dynamicBullets: true
     }
   })
 
@@ -43,16 +45,19 @@ const ImageTextSwiper = () => {
     }
   ]
 
-  // [TODO] 後に修正する
   return (
     <Swiper {...params}>
       {imageTexts.map(imageText => (
-        <div className='swipe-thumb' key={imageText.id}>
-          <img src={imageText.img} alt='スワイプ画像' />
-          <div className='text-box'>
-            <p>{imageText.text}</p>
-            <p>{imageText.name}</p>
-          </div>
+        <div className='swiper-container'>
+            <div class="swiper-wrapper">
+              <div className='swiper-slide' key={imageText.id}>
+                <img src={imageText.img} alt='スワイプ画像' />
+                <div className='text-box'>
+                  <p>{imageText.text}</p>
+                  <p className='company-name'>{imageText.name}</p>
+                </div>
+              </div>
+            </div>
         </div>
       ))}
     </Swiper>
