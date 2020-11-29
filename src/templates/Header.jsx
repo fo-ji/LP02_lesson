@@ -19,7 +19,7 @@ const Header = () => {
     @media screen and (max-width: 768px) {
       background-image: none;
       padding: 0;
-      margin-bottom: 20px
+      margin-bottom: 20px;
     }
   `
 
@@ -73,6 +73,9 @@ const Header = () => {
       right: 0;
       z-index: 999;
       width: 100%;
+      @media screen and (max-width: 768px) {
+        width: 120%;
+      }
     }
   `
 
