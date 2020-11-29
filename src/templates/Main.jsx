@@ -217,69 +217,66 @@ const Main = () => {
       }
     }
   `
-  // [TODO] 後に修正する ↓
+
   const SwipeWrapper = styled.div`
-    .swipe-thumb {
-      width: 100%;
-      display: flex;
-      @media screen and (max-width: 768px) {
-        margin-top: 50px;
-      }
-    }
-    .swipe-thumb img {
-      width: 100%;
-    }
-    .swipe-thumb .text-box {
-      background-image: url(${backgroundImage});
-      background-repeat: no-repeat;
-      color: #FFFFFF;
-      max-width: 318px;
-      margin-right: 10px;
-      padding-top: 40px;
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-    .swipe-thumb .text-box p {
-      font-size: 17px;
-      font-weight: bold;
-      line-height: 1.5;
-    }
     .swiper-container {
       width: 100%;
-      height: 100%;
+      height: 440px;
+      padding-bottom: 70px;
+    }
+    .swiper-wrapper {
+      width: 100%;
     }
     .swiper-slide {
-      height: 366px;
       text-align: center;
       font-size: 18px;
       background: #fff;
-
       /* Center slide text vertically */
-      /* display: -webkit-box;
+      display: -webkit-box;
       display: -ms-flexbox;
-      display: -webkit-flex; */
-      /* display: flex; */
-      /* -webkit-box-pack: center;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
       -ms-flex-pack: center;
-      -webkit-justify-content: center; */
-      /* justify-content: center; */
-      /* -webkit-box-align: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
       -ms-flex-align: center;
-      -webkit-align-items: center; */
-      /* align-items: center; */
-      /* width: 80%; */
-    } 
-    .swiper-slide:nth-child(2n) {
-      width: 400px;
+      -webkit-align-items: center;
+      align-items: center;
+      width: 80%;
     }
-    /* .swiper-slide:nth-child(3n) {
-      width: 200px;
-    } */
-    .swiper-pagination {
-      margin-top: 130px;
+    .swiper-slide img {
+      width: 100%;
+      height: 366px;
+    }
+    .swiper-slide .text-box {
+      background-image: url(${backgroundImage});
+      background-repeat: no-repeat;
+      color: #FFFFFF;
+      width: 318px;
+      height: 366px;
+      padding-top: 40px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-right: -200px;
+    } 
+    .swiper-slide .text-box p {
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.7;
+    }
+    .swiper-slide .text-box .company-name {
+      text-align: right;
+      margin-top: 20px;
+    }
+    .swiper-slide:nth-child(2n) {
+      width: 80%;
+    }
+    .swiper-slide:nth-child(3n) {
+      width: 80%;
     }
   `
-  // [TODO] 後に修正する ↑ 
 
   const Banner = styled.div`
     display: flex;
@@ -523,7 +520,6 @@ const Main = () => {
         </Features>
         <EasyToUse>
           <h2>EASY TO USE<small>誰もが理解しやすいインターフェイス</small></h2>
-          {/* [TODO] 後に修正する ↓ */}
           <SliderBox>
             <Container>
               <p>「ビジネス向けソフトウェアは使いにくい」と思っていませんか？<br />APOLLO SALESは、効率化のためゼロから設計し、とても使いやすいインターフェイスです。</p>
@@ -536,7 +532,6 @@ const Main = () => {
           <SwipeWrapper>
             <ImageTextSwiper />
           </SwipeWrapper>
-          {/* [TODO] 後に修正する ↑ */}
           <Banner>
             <img src={bannerBellface} />
             <img src={bannerJellyfish} />
