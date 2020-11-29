@@ -9,10 +9,13 @@ const Footer = () => {
     color: #FFFFFF;
     padding: 0 60px;
     font-size: 18px;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 100px;
+    }
     .container {
       padding-top: 65px;
       padding-bottom: 100px;
-      width: 85%;
+      width: 100%;
       margin: 0 auto;
     }
     .container .header {
@@ -23,9 +26,16 @@ const Footer = () => {
     }
     .container .row {
       display: flex;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+      }
     } 
     .container .row .links {
       padding-right: 120px;
+      @media screen and (max-width: 768px) {
+        padding-right: 0;
+      }
     } 
     .container .row .links p {
       margin: 19px 0;
@@ -38,9 +48,18 @@ const Footer = () => {
     }
     .container .row .profile {
       margin-left: 130px;
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+        border-top: 1px solid #FFFFFF;
+        margin-top: 20px;
+        padding-top: 20px;
+      }
     }
     .container .row .profile ul {
       font-size: 16px;
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
     }
     .profile ul > li {
       margin-bottom: 12px;
@@ -52,6 +71,10 @@ const Footer = () => {
       margin-top: 5px;
       font-size: 11.9px;
       color: #BEBEBE;
+      @media screen and (max-width: 768px) {
+        margin-top: 15px;
+        text-align: center;
+      }
     }
   `
 
